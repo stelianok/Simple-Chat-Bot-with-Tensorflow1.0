@@ -28,6 +28,12 @@
          "patterns": ["when are you guys open", "what are your hours", "hours of operation"],
          "responses": ["We are open 7am-4pm Monday-Friday!"],
          "context_set": ""
+        },
+        {"tag": "feel",
+         "patterns": ["How are you feeling?", "Are you ok?", "How do you feel?","Feeling good?"],
+         "responses": ["I'm Fine ^^ Thanks for asking","Yesss :3333", "I'm great!", "I'm ok ^^","Better Now talking with u :3" ],
+         "context_set": ""
         }
+
    ]
 }
