@@ -1,5 +1,5 @@
 import nltk
-#nltk.download('punkt')
+#nltk.download('punkt') if the code doesn't work, try putting this line
 from nltk.stem.lancaster import LancasterStemmer
 stemmer = LancasterStemmer()
 
@@ -76,11 +76,11 @@ net = tflearn.regression(net)
 
 model = tflearn.DNN(net)
 
-
-#model.load("model.tflearn")
-
-model.fit(training, output, n_epoch=1000, batch_size=8, show_metric=True)
-model.save("model.tflearn")
+try:
+    model.load("model.tflearn")
+except:
+    model.fit(training, output, n_epoch=1000, batch_size=8, show_metric=True)
+    model.save("model.tflearn")
 
 def bag_of_words(s,words):
   bag = [0 for _ in range(len(words))]
